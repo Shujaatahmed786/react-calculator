@@ -11,13 +11,6 @@ body{
     margin: 3rem auto;
 }
 
-#header-img{
-    height: 5rem;
-    width: 5rem;
-     background-position: center;
-    display: flex;
-    justify-content: center;
-}
 
 #header h1{
     font-size: 1.5rem;
@@ -26,6 +19,7 @@ body{
 #user-input{
     display: flex;
     justify-content: center;
+    
 }
 
 .inp-1{
@@ -33,13 +27,35 @@ body{
 
 }
 
+#result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.invalidInput{
+    text-align: center;
+   
+}
+
 .result{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.tr{
-    display: flex;
-    justify-content: center;
+.table-heading{
+    border: 2px solid rgb(173, 28, 28);
+    
+}
+
+.table-values td{
+    width: 125px; 
+
 
 }
+.table-heading td {
+    padding-right: 20px; 
+  }
+  

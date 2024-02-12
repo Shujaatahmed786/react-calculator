@@ -13,15 +13,16 @@ const Results = ({userInput}) => {
 
   return (
     <table id="result">
-      <thead >
-        <tr >
-          <th>Year</th>
-          <th>Investment Value</th>
-          <th>Interest (Year)</th>
-          <th>Total Interest</th>
-          <th>Invested Capital</th>
-        </tr>
-        </thead> 
+     <thead>
+  <tr class="table-heading">
+    <td class="value">Year</td>
+    <td>Investment Value</td>
+    <td>Interest (Year)</td>
+    <td>Total Interest</td>
+    <td>Invested Capital</td>
+  </tr>
+</thead>
+
         <tbody>
           {resultData?.map((yearData) => {
               const totalInterest = 
@@ -29,13 +30,9 @@ const Results = ({userInput}) => {
                (yearData.annualInvestment * yearData.year || 0)  - initialInvestment;
 
               const totalAmountInvested = yearData.valueEndOfYear - totalInterest;
-              
-
-              
-              
-
+            
             return (
-              <tr key={yearData.year}>
+              <tr key={yearData.year} className="table-values">
               <td>{yearData.year}</td>
               <td>{formatter.format(yearData?.valueEndOfYear)}</td>
               <td>{formatter.format(yearData.interest)}</td>

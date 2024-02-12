@@ -1,5 +1,4 @@
 export function calculateInvestResults(userInput) {
-    console.log("userInput", userInput)
 
 
     const annualData = [];
@@ -18,7 +17,6 @@ export function calculateInvestResults(userInput) {
         
     }
     
-    console.log("Annual Data", annualData)
     return annualData;
 }
 
