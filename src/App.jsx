@@ -7,16 +7,16 @@ import Result from './components/results'
 
 function App() {
   const [userInput, setUserInput] = useState({
-    initialInvestment: 1000,
-    annualInvestment: 1200,
-    expectedReturn: 6,
-    duration: 10
+    initialInvestment: "",
+    annualInvestment: "",
+    expectedReturn: "",
+    duration: "",
 });
 
 const inputIsValid = userInput.duration >= 1;
 
 const handleChange = (inputIdentifier, newValue) =>{
-  console.log(userInput, newValue)
+  // console.log(userInput, newValue)
   setUserInput(prevUserInput => {
       return {
           ...prevUserInput,
@@ -32,7 +32,6 @@ const handleChange = (inputIdentifier, newValue) =>{
     <UserInput userInput={userInput} handleChange={handleChange}/>
     {!inputIsValid && <p>Please enter valid data</p>}
     {inputIsValid && <Result userInput={userInput} />}
-    <Result userInput={userInput}/>
     </div>
   );
 }
