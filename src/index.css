@@ -2,60 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: aquamarine;
+body {
+  background-color: aquamarine;
 }
 
-#header{
-    text-align: center;
-    margin: 3rem auto;
+h1 {
+    font-weight: 800;
 }
 
-
-#header h1{
-    font-size: 1.5rem;
+#header {
+  text-align: center;
+  margin: 3rem auto;
 }
 
-#user-input{
+#header h1 {
+  font-size: 1.5rem;
+}
+
+#user-input {
+  display: flex;
+  justify-content: center;
+}
+
+.inp-1 {
+  margin: 40px;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.invalidInput {
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.table-heading {
     display: flex;
-    justify-content: center;
+  border: 2px solid rgb(173, 28, 28);
+  /* padding: 60px; */
+  gap: 30px;
+  margin-top: 10px;
+  font-weight: 700;
+
+}
+
+.table-values {
+    display: flex;
+    gap: 70px;
+    border: 2px solid black;
+    text-align: center;
     
 }
 
-.inp-1{
+
+.valid-data{
     margin: 10px;
-
 }
-
-#result{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.invalidInput{
-    text-align: center;
-   
-}
-
-.result{
-    display: flex;
-    flex-direction: column;
-}
-
-.table-heading{
-    border: 2px solid rgb(173, 28, 28);
-    
-}
-
-.table-values td{
-    width: 125px; 
-
-
-}
-.table-heading td {
-    padding-right: 20px; 
-  }
-  
